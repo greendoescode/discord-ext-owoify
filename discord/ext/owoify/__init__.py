@@ -36,7 +36,17 @@ class owoify:
          else:
              data = data.replace("l", "w")
              message = data.replace("r", "w")
-             list = ["XwX", "OwO", "UwU", ">:3"]
+             list = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
              owoified = f"{message} {random.choice(list)}"
              return await channel.send(f"{owoified}")
-      
+
+     async def random(channel):
+         """
+         Returns random owo emoji,
+         Attributes are channel, just define ctx or whatever
+         """
+         if channel is None:
+             raise AttributeError("Attribute 'random' requires 'channel' as a object")
+         else:
+             emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
+             return channel.send(f"{random.choice(emoji)}")
