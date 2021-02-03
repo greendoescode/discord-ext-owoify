@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 import discord
 import random
-from words import list
+from owoify.words import list
 
 __version__ = '0.0.1-a'
 
