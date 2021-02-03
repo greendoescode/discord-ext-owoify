@@ -22,17 +22,19 @@ DEALINGS IN THE SOFTWARE.
 
 
 import discord
-
+import random
+from words import emojis
 
 __version__ = '0.0.1-a'
 
 
 class owoify:
      
-     async def text(*, data):
+     async def text(channel, *, data):
          if data is None:
              raise AttributeError("Attribute 'text' requires 'data' as a object")
          else:
-             message = data.replace("l", "w")
-             return message
+             message = data.replace("l", "w") and data.replace("r", "w")
+             owoified = f"{message} {random.choice(list)}"
+             return await ctx.send(f"{owoified}")
       
