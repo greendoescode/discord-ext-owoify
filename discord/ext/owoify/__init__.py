@@ -37,5 +37,5 @@ class owoify:
              message = data.replace("l", "w") and data.replace("r", "w")
              list = ["XwX", "OwO", "UwU", ">:3"]
              owoified = f"{message} {random.choice(list)}"
-             return await ctx.send(f"{owoified}")
+             return await channel.send(f"{owoified}")
       
