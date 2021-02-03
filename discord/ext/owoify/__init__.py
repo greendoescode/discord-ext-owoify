@@ -34,7 +34,8 @@ class owoify:
          if data is None:
              raise AttributeError("Attribute 'text' requires 'data' as a object")
          else:
-             message = data.replace("l", "w") and data.replace("r", "w")
+             data = data.replace("l", "w")
+             message = data.replace("r", "w")
              list = ["XwX", "OwO", "UwU", ">:3"]
              owoified = f"{message} {random.choice(list)}"
              return await channel.send(f"{owoified}")
