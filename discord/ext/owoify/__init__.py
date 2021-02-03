@@ -29,7 +29,7 @@ __version__ = '0.0.1-a'
 
 class owoify:
      
-     async def text(self, *, data):
+     async def text(*, data):
          if data is None:
              raise AttributeError("Attribute 'text' requires 'data' as a object")
          else:
