@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 
 import discord
 import random
-from owoify.words import list
+
 
 __version__ = '0.0.1-a'
 
@@ -35,6 +35,7 @@ class owoify:
              raise AttributeError("Attribute 'text' requires 'data' as a object")
          else:
              message = data.replace("l", "w") and data.replace("r", "w")
+             list = ["XwX", "OwO", "UwU", ">:3"]
              owoified = f"{message} {random.choice(list)}"
              return await ctx.send(f"{owoified}")
       
