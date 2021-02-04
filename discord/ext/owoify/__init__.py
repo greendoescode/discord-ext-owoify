@@ -69,6 +69,11 @@ async def user_owo(channel, member: discord.Member, text):
          if text == list:
                   message = f"Hewwo {member}"
          return await channel.send(f"{message}")
+
+async def decode(text):
+         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love")
+         return decoded
+                  
          
          
          
