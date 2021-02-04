@@ -46,4 +46,4 @@ async def owo():
      """
      Returns random owo emoji
      """
-     return await randemoji()
+     return randemoji()
