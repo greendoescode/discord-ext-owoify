@@ -42,7 +42,7 @@ async def owoify(*, text):
      owoified = f"{message} {random()}"
      return owoified
 
-async def random():
+async def owo():
      """
      Returns random owo emoji
      """
