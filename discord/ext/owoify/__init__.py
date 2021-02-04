@@ -71,7 +71,7 @@ async def user_owo(channel, member: discord.Member, text):
          return await channel.send(f"{message}")
 
 async def decode(text):
-         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love")
+         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")_
          return decoded
                   
          
