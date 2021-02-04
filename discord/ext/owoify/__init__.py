@@ -29,13 +29,14 @@ __version__ = '0.0.2-a'
 
 
 def randemoji():
-         emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
+         emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ", "CwC"]
          return f"{random.choice(emoji)}"
 
 
 async def owoify(text):
      """
      Owoify's given text
+     You need to await this function.
      """
      message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
      owoified = f"{message} {randemoji()}"
@@ -44,5 +45,16 @@ async def owoify(text):
 async def owo():
      """
      Returns random owo emoji
+     You need to await this function.
      """
      return randemoji()
+
+async def discord_owo(channel, text):
+         """
+         Sends owoified message to a certain channel
+         Please use "owoify" for other uses
+         You need to await this function.
+         """
+         message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
+         owoified = f"{message} {randemoji()}"
+         return await channel.send(f"{owoified}")
