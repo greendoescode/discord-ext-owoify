@@ -37,11 +37,11 @@ async def owoify(*, text):
      """
      text = text.replace("l", "w")
      message = text.replace("r", "w")
-     owoified = f"{message} {random}"
+     owoified = f"{message} {random()}"
      return owoified
 
 async def random():
      """
      Returns random owo emoji
      """
-     return await random
+     return random()
