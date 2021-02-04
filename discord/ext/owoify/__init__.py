@@ -59,18 +59,15 @@ async def discord_owo(channel, text):
          owoified = f"{message} {randemoji()}"
          return await channel.send(f"{owoified}")
 
-async def user_owo(channel, text, name=None):
+async def user_owo(channel, text, name):
          """
          Owoifys a users text for a user
          You need to use await for this function
          """
          if name is None:
               name = ""
-         list = ["Hello", "hello", "hi", "Hi"]
          message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-         if text == list:
-                  message = f"Hewwo {name}"
-         return await channel.send(f"{message}")
+         return await channel.send(f"{message} - {name}")
 
 async def decode(text):
          decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")
