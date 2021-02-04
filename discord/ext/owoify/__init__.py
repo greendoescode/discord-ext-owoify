@@ -29,51 +29,54 @@ __version__ = '0.0.2-a'
 
 
 def randemoji():
-         emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ", "CwC"]
-         return f"{random.choice(emoji)}"
+    emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ", "CwC"]
+    return f"{random.choice(emoji)}"
 
 
 async def owoify(text):
-     """
-     Owoify's given text
-     You need to await this function.
-     """
-     message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-     owoified = f"{message} {randemoji()}"
-     return owoified
+    """
+    Owoify's given text
+    You need to await this function.
+    """
+    message = text.replace("r", "w").replace(
+        "l", "w").replace("L", "W").replace("R", "W")
+    owoified = f"{message} {randemoji()}"
+    return owoified
+
 
 async def owo():
-     """
-     Returns random owo emoji
-     You need to await this function.
-     """
-     return randemoji()
+    """
+    Returns random owo emoji
+    You need to await this function.
+    """
+    return randemoji()
+
 
 async def discord_owo(channel, text):
-         """
-         Sends owoified message to a certain channel
-         Please use "owoify" for other uses
-         You need to await this function.
-         """
-         message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-         owoified = f"{message} {randemoji()}"
-         return await channel.send(f"{owoified}")
+    """
+    Sends owoified message to a certain channel
+    Please use "owoify" for other uses
+    You need to await this function.
+    """
+    message = text.replace("r", "w").replace(
+        "l", "w").replace("L", "W").replace("R", "W")
+    owoified = f"{message} {randemoji()}"
+    return await channel.send(f"{owoified}")
+
 
 async def user_owo(channel, text, name):
-         """
-         Owoifys a users text for a user
-         You need to use await for this function
-         """
-         if name is None:
-              name = ""
-         message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-         return await channel.send(f"{message} - {name}")
+    """
+    Owoifys a users text for a user
+    You need to use await for this function
+    """
+    if name is None:
+        name = ""
+    message = text.replace("r", "w").replace(
+        "l", "w").replace("L", "W").replace("R", "W")
+    return await channel.send(f"{message} - {name}")
+
 
 async def decode(text):
-         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")
-         return decoded
-                  
-         
-         
-         
-         
+    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace(
+        "Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")
+    return decoded
