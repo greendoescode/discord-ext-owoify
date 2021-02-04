@@ -73,7 +73,7 @@ async def user_owo(channel, text, name=None):
          return await channel.send(f"{message}")
 
 async def decode(text):
-         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")_
+         decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")
          return decoded
                   
          
