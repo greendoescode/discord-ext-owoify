@@ -23,11 +23,12 @@ DEALINGS IN THE SOFTWARE.
 
 import discord
 
+import random
 
 __version__ = '0.0.1-a'
 
 
-def random():
+def owo():
          emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
          return f"{random.choice(emoji)}"
 
@@ -45,5 +46,4 @@ async def random():
      """
      Returns random owo emoji
      """
-     emoji = await random()
-     return emoji
+     return owo()
