@@ -27,7 +27,7 @@ import discord
 __version__ = '0.0.1-a'
 
 
-sync def random():
+sync random():
          emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
          return f"{random.choice(emoji)}"
 
