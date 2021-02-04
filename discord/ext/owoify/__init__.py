@@ -20,28 +20,19 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
-
-import discord
-
-
-__version__ = '0.0.1-a'
+import random
 
 
-def random():
-         emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
-         return f"{random.choice(emoji)}"
+# constants
 
-async def owoify(*, text):
-     """
-     Owoify's given text
-     """
-     text = text.replace("l", "w")
-     message = text.replace("r", "w")
-     owoified = f"{message} {await random()}"
-     return owoified
+__version__ = '0.0.2-a'
+OWOS = ['XwX', 'OvO', 'OwO', 'UwU', '>:3', '-w-', 'ÙwÚ']
 
-async def random():
-     """
-     Returns random owo emoji
-     """
-     return await random()
+
+def owoify(text):
+  """
+  Owoify's given text.
+  """
+  owoified_text = text.replace('l', 'w').replace('L', 'W').replace('r', 'w').replace('R', 'W')
+  random_owo = random.choice(OWOS)
+  return f"{owoified_text} {random_owo}"
