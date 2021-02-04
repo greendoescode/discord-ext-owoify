@@ -69,8 +69,6 @@ async def user_owo(channel, text, name):
     Owoifys a users text for a user
     You need to use await for this function
     """
-    if name is None:
-        name = ""
     message = text.replace("r", "w").replace(
         "l", "w").replace("L", "W").replace("R", "W")
     return await channel.send(f"{message} - {name}")
