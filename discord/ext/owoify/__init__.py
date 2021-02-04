@@ -25,7 +25,7 @@ import discord
 
 import random
 
-__version__ = '0.0.1-a'
+__version__ = '0.0.2-a'
 
 
 def randemoji():
@@ -37,9 +37,8 @@ async def owoify(*, text):
      """
      Owoify's given text
      """
-     text = text.replace("l", "w")
-     message = text.replace("r", "w")
-     owoified = f"{message} {random()}"
+     message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
+     owoified = f"{message} {randemoji())}"
      return owoified
 
 async def owo():
