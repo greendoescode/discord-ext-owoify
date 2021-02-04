@@ -59,7 +59,7 @@ async def discord_owo(channel, text):
          owoified = f"{message} {randemoji()}"
          return await channel.send(f"{owoified}")
 
-async def user_owo(channel, mmeber: discord.Member, text):
+async def user_owo(channel, member: discord.Member, text):
          """
          Owoifys a users text for a user
          You need to use await for this function
