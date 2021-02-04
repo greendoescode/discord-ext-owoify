@@ -33,7 +33,7 @@ def randemoji():
          return f"{random.choice(emoji)}"
 
 
-async def owoify(*, text):
+async def owoify(text):
      """
      Owoify's given text
      """
