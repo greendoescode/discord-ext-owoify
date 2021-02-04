@@ -52,4 +52,4 @@ class owoify:
              raise AttributeError("Attribute 'random' requires 'channel' as a object")
          else:
              emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
-             return await channel.send(f"{random.choice(emoji)}")
+             return await channel.send(f"{random}")
