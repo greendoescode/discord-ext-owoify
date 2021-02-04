@@ -28,12 +28,9 @@ import random
 __version__ = '0.0.1-a'
 
 
-def random(channel):
-         if channel is None:
-             raise AttributeError("Attribute 'random' requires 'channel' as a object")
-         else:
-             emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
-             return await channel.send(f"{random.choice(emoji)}")
+def random():
+         emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
+         return f"{random.choice(emoji)}"
 
 class owoify:
      
