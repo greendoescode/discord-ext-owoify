@@ -22,7 +22,6 @@ DEALINGS IN THE SOFTWARE.
 
 
 import discord
-import random
 
 
 __version__ = '0.0.1-a'
@@ -32,24 +31,17 @@ def random():
          emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
          return f"{random.choice(emoji)}"
 
-class owoify:
-     
-     async def text(channel, *, data):
-         if data is None:
-             raise AttributeError("Attribute 'text' requires 'data' as a object")
-         else:
-             data = data.replace("l", "w")
-             message = data.replace("r", "w")
-             owoified = f"{message} {random}"
-             return await channel.send(f"{owoified}")
+async def owoify(*, text):
+     """
+     Owoify's given text
+     """
+     text = data.replace("l", "w")
+     message = data.replace("r", "w")
+     owoified = f"{message} {random}"
+     return owoified
 
-     async def random(channel):
-         """
-         Returns random owo emoji,
-         Attributes are channel, just define ctx or whatever
-         """
-         if channel is None:
-             raise AttributeError("Attribute 'random' requires 'channel' as a object")
-         else:
-             emoji = ["XwX", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
-             return await channel.send(f"{random}")
+async def random():
+     """
+     Returns random owo emoji
+     """
+     return await random
