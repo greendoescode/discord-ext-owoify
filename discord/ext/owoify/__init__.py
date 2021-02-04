@@ -27,7 +27,7 @@ import discord
 __version__ = '0.0.1-a'
 
 
-def random():
+sync def random():
          emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
          return f"{random.choice(emoji)}"
 
@@ -37,11 +37,11 @@ async def owoify(*, text):
      """
      text = text.replace("l", "w")
      message = text.replace("r", "w")
-     owoified = f"{message} {await random()}"
+     owoified = f"{message} {random()}"
      return owoified
 
 async def random():
      """
      Returns random owo emoji
      """
-     return await random()
+     return random()
