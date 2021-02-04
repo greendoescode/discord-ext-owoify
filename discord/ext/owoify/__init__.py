@@ -28,7 +28,7 @@ import random
 __version__ = '0.0.1-a'
 
 
-def owo():
+def randemoji():
          emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ"]
          return f"{random.choice(emoji)}"
 
@@ -46,4 +46,4 @@ async def owo():
      """
      Returns random owo emoji
      """
-     return await owo()
+     return await randemoji()
