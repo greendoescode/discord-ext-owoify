@@ -38,7 +38,7 @@ async def owoify(*, text):
      Owoify's given text
      """
      message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-     owoified = f"{message} {randemoji())}"
+     owoified = f"{message} {randemoji()}"
      return owoified
 
 async def owo():
