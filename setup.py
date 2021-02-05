@@ -3,7 +3,7 @@ import re
 
 
 
-version = '0.0.2.1-a'
+version = '0.0.2.1.1-a'
 
 longdescription = open("README.md", "r").read()
 
