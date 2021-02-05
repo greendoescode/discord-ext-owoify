@@ -1,14 +1,26 @@
-# discord-ext-owoify
+[![License](https://img.shields.io/github/license/GreenDiscord/discord-ext-owoify)](https://mit-license.org/) ![version](https://img.shields.io/pypi/v/discord-ext-owoify) [![Discord](https://img.shields.io/discord/807028485667028993.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/esARSKDMAp)
+
+### discord-ext-owoify
 Simple ext package for owoifing text.
 
-# Install
+### Install
 Simple paste this into your terminal
 
-- ``python -m pip install -U git+https://github.com/GreenDiscord/discord-ext-owoify``
+- ```shell script
+  pip install discord-ext-owoify
+  ```
 
-# Simple Use
+If you need to **update** please use the following:
+
+- ```python
+  pip install discord-ext-owoify
+  ```
+
+### Simple Use
 Firstly, import the package using
 
-- ``from discord.ext import owoify``
+- ```python
+  from discord.ext import owoify
+  ```
 
-# update green
+### update green
