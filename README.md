@@ -13,7 +13,7 @@ Simple paste this into your terminal
 If you need to **update** please use the following:
 
 - ```python
-  pip install discord-ext-owoify
+  pip install --upgrade discord-ext-owoify
   ```
 
 ### Simple Use
