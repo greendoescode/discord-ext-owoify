@@ -25,7 +25,7 @@ import discord
 
 import random
 
-__version__ = '0.0.2-a'
+__version__ = '0.0.2.2-a'
 
 
 def randemoji():
@@ -58,8 +58,7 @@ async def discord_owo(channel, text):
     Please use "owoify" for other uses
     You need to await this function.
     """
-    message = text.replace("r", "w").replace(
-        "l", "w").replace("L", "W").replace("R", "W")
+    message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
     owoified = f"{message} {randemoji()}"
     return await channel.send(f"{owoified}")
 
@@ -75,6 +74,5 @@ async def user_owo(channel, text, name):
 
 
 async def decode(text):
-    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace(
-        "Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are")
+    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
     return decoded
