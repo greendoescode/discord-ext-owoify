@@ -1,16 +1,16 @@
-### discord-ext-owoify
+# discord-ext-owoify
 Simple ext package for owoifing text.
 
-### Install
+# Install
 Simple paste this into your terminal
-```py
+``py
 python -m pip install -U git+https://github.com/GreenDiscord/discord-ext-owoify
-```
+``
 
 ### Simple Use
 Firstly, import the package using
-```py
+``py
 from discord.ext import owoify
-```
+``
 
-### update green
+# update green
