@@ -23,4 +23,20 @@ Firstly, import the package using
   from discord.ext import owoify
   ```
 
-### update green
+Now, lets use the ```owoify.owoify()``` attribute to **owoify** your text!
+
+- ```python
+  from discord.ext import owoify
+
+  print(await owoify.owoify("TEXT"))
+
+  ```
+
+Wanna decode this now? Use the ```owoify.decode()``` attribute for this module.
+- ```python
+  from discord.ext import owoify
+  
+  print(await owoify.decode("TEXT"))
+  ```
+  
+  Note: The decode attribute is still in dev, as i need to find all words that would get owoified :) 
