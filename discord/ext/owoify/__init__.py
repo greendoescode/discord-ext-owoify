@@ -25,7 +25,7 @@ import discord
 
 import random
 
-__version__ = '0.0.2.2-a'
+__version__ = '0.0.3-a'
 
 
 def randemoji():
