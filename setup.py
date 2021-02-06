@@ -3,7 +3,7 @@ import re
 
 
 
-version = '0.0.2.1.1-a'
+version = '0.0.3-a'
 
 
 
@@ -11,11 +11,11 @@ setup(name='discord-ext-owoify',
       author='Green',
       url='https://github.com/GreenDiscord/discord-ext-owoify',
       version=version,
-      packages=find_packages(),
+      packages=['discord.ext.owoify'],
       license='MIT',
       long_description=open("README.md").read(),
       long_description_content_type="text/markdown",
-      download_url = 'https://github.com/GreenDiscord/discord-ext-owoify/archive/v0.0.2.2-a.tar.gz',
+      download_url = 'https://github.com/GreenDiscord/discord-ext-owoify/archive/v0.0.3-a.tar.gz',
       description='An extension module to owoify text',
       classifiers=[
         "Development Status :: 5 - Production/Stable",
