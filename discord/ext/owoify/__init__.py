@@ -40,7 +40,7 @@ async def owoify(text):
     """
     message = text.replace("r", "w").replace(
         "l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message} {randemoji()}"
+    owoified = f"{message[0][0]}-{message} {randemoji()}"
     return owoified
 
 
@@ -59,7 +59,7 @@ async def discord_owo(channel, text):
     You need to await this function.
     """
     message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message} {randemoji()}"
+    owoified = f"{message[0][0]}-{message} {randemoji()}"
     return await channel.send(f"{owoified}")
 
 
@@ -68,11 +68,15 @@ async def user_owo(channel, text, name):
     Owoifys a users text for a user
     You need to use await for this function
     """
-    message = text.replace("r", "w").replace(
-        "l", "w").replace("L", "W").replace("R", "W")
-    return await channel.send(f"{message} - {name}")
+    message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
+    owoified = f"'{message[0][0]}-{message}' - {name}"
+    return await channel.send(f"{owoified}")
 
 
 async def decode(text):
     decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
     return decoded
+
+async def discord_decode(channel, text):
+    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
+    return await channel.send(f"{decoded}")
