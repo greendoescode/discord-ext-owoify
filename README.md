@@ -40,3 +40,13 @@ Wanna decode this now? Use the ```owoify.decode()``` attribute for this module.
   ```
   
   Note: The decode attribute is still in dev, as i need to find all words that would get owoified :) 
+  
+  
+### Devlepoment version
+
+To install this, you need to install from the github
+
+- ```shell script
+  pip install -U git+https://github.com/GreenDiscord/discord-ext-owoify
+  ```
+Thanks! Please give feedback in issues :)
