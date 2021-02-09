@@ -33,6 +33,15 @@ def randemoji():
     return f"{random.choice(emoji)}"
 
 
+def owoifysync(text):
+    message = text.replace("r", "w").replace(
+        "l", "w").replace("L", "W").replace("R", "W")
+    owoified = f"{message[0][0]}-{message}"
+    l = random.randint(1, 2)
+    if l == 2:
+        owoified = f"{message}"
+    return owoified
+
 async def owoify(text):
     """
     Owoify's given text
@@ -40,7 +49,10 @@ async def owoify(text):
     """
     message = text.replace("r", "w").replace(
         "l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message[0][0]}-{message} {randemoji()}"
+    owoified = f"{message[0][0]}-{message}"
+    l = random.randint(1, 2)
+    if l == 2:
+        owoified = f"{message}"
     return owoified
 
 
@@ -59,7 +71,11 @@ async def discord_owo(channel, text):
     You need to await this function.
     """
     message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message[0][0]}-{message} {randemoji()}"
+    message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
+    owoified = f"{message[0][0]}-{message}"
+    l = random.randint(1, 2)
+    if l == 2:
+        owoified = f"{message}"
     return await channel.send(f"{owoified}")
 
 
@@ -70,6 +86,9 @@ async def user_owo(channel, text, name):
     """
     message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
     owoified = f"'{message[0][0]}-{message}' - {name}"
+    l = random.randint(1, 2)
+    if l == 2:
+        owoified = f"'{message}' - {name}"
     return await channel.send(f"{owoified}")
 
 
