@@ -13,8 +13,8 @@ def owoifyer(text):
     return owoified
 
 def randemoji(number: int):
-    emojis = dict([("XwX", 1), ("OvO", 2), ("OwO", 3), ("UwU", 4), (">:3", 5), ("-w-", 6), ("ÙwÚ", 7), ("CwC", 8)])
-    emoji = (emojis[int(number)])
+    emojis = dict([(1, "XwX"), (2, "OvO"), (3, "OwO"), (4, "UwU"), (5, ">:3"), (6, "-w-"), (7, "ÙwÚ"), (8, "CwC")])
+    emoji = (emojis[number])
     if number in emoji:
         return f"{random.choice(emoji)}"
     else:
