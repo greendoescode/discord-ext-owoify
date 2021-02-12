@@ -34,10 +34,10 @@ from useful import owoifyer
 __version__ = '0.0.5-a'
 
 
-def owo(number):
+def owo(number: int):
     emojis = dict([("XwX", 1), ("OvO", 2), ("OwO", 3), ("UwU", 4), (">:3", 5), ("-w-", 6), ("ÙwÚ", 7), ("CwC", 8)])
-    if number in emojis:
-        emoji = (emojis[number])
+    emoji = (emojis[number])
+    if number in emoji:
         return f"{random.choice(emoji)}"
     else:
         raise NotAValidNumber(f"Number '{number}' is not a valid option")
