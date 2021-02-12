@@ -24,7 +24,7 @@ def randemoji(number: int):
                  "7": "ÙwÚ",
                  "8": "CwC"
                  }
-        emoji = random.choice(emojis[str(number)])
+        emoji = emojis[str(number)]
         return emoji
     except KeyError:
         raise NotAValidNumber(f"Number '{number}' is not a valid option, please pick from 1-8")
