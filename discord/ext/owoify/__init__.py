@@ -20,8 +20,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
-class NotAValidNumber(Exception):
-    pass
+
 
 
 import discord
@@ -29,18 +28,12 @@ import discord
 import random
 
 
-from useful import owoifyer
+from useful import owoifyer, randemoji
 
 __version__ = '0.0.5-a'
 
 
-def owo(number: int):
-    emojis = dict([("XwX", 1), ("OvO", 2), ("OwO", 3), ("UwU", 4), (">:3", 5), ("-w-", 6), ("ÙwÚ", 7), ("CwC", 8)])
-    emoji = (emojis[number])
-    if number in emoji:
-        return f"{random.choice(emoji)}"
-    else:
-        raise NotAValidNumber(f"Number '{number}' is not a valid option")
+
 
 def owoify(text):
     """
@@ -66,3 +59,7 @@ async def discord_owo(channel, text):
 def decode(text):
     decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
     return decoded
+
+def owo(number):
+    owoemoji = randemoji(1)
+    return owoemoji
