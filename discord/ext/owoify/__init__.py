@@ -28,7 +28,7 @@ import discord
 import random
 
 
-from useful import owoifyer, randemoji
+from .useful import owoifyer, randemoji
 
 __version__ = '0.0.5-a'
 
