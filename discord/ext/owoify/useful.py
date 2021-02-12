@@ -15,7 +15,7 @@ def owoifyer(text):
 def randemoji(number: int):
     try:
         emojis = {
-                 "1":, "XwX", 
+                 "1": "XwX", 
                  "2": "OvO", 
                  "3": "OwO", 
                  "4": "UwU", 
