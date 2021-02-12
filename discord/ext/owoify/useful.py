@@ -13,9 +13,9 @@ def owoifyer(text):
     return owoified
 
 def randemoji(number: int):
-    emojis = dict([(1, "XwX"), (2, "OvO"), (3, "OwO"), (4, "UwU"), (5, ">:3"), (6, "-w-"), (7, "ÙwÚ"), (8, "CwC")])
-    emoji = (emojis[number])
-    if number in emoji:
+    try:
+        emojis = dict([(1, "XwX"), (2, "OvO"), (3, "OwO"), (4, "UwU"), (5, ">:3"), (6, "-w-"), (7, "ÙwÚ"), (8, "CwC")])
+        emoji = (emojis[number])
         return f"{random.choice(emoji)}"
-    else:
-        raise NotAValidNumber(f"Number '{number}' is not a valid option")
+    except KeyError:
+        raise NotAValidNumber(f"Number '{number}' is not a valid option, please pick from 1-8")
