@@ -20,36 +20,37 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
+class NotAValidNumber(Exception):
+    pass
+
 
 import discord
 
 import random
 
-__version__ = '0.0.4-a'
+
+from useful import owoifyer
+
+__version__ = '0.0.5-a'
 
 
-def randemoji():
-    emoji = ["XwX", "OvO", "OwO", "UwU", ">:3", "-w-", "ÙwÚ", "CwC"]
-    return f"{random.choice(emoji)}"
+def owo(number):
+    emojis = dict([("XwX", 1), ("OvO", 2), ("OwO", 3), ("UwU", 4), (">:3", 5), ("-w-", 6), ("ÙwÚ", 7), ("CwC", 8)])
+    if number in emojis:
+        emoji = (emojis[number])
+        return f"{random.choice(emoji)}"
+    else:
+        raise NotAValidNumber(f"Number '{number}' is not a valid option")
 
-
-async def owoify(text):
+def owoify(text):
     """
     Owoify's given text
     You need to await this function.
     """
-    message = text.replace("r", "w").replace(
-        "l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message[0][0]}-{message} {randemoji()}"
+    owoified = owoifyer(f"{text}")
     return owoified
 
 
-async def owo():
-    """
-    Returns random owo emoji
-    You need to await this function.
-    """
-    return randemoji()
 
 
 async def discord_owo(channel, text):
@@ -58,25 +59,10 @@ async def discord_owo(channel, text):
     Please use "owoify" for other uses
     You need to await this function.
     """
-    message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"{message[0][0]}-{message} {randemoji()}"
+    owoified = owoifyer(f"{text}")
     return await channel.send(f"{owoified}")
 
 
-async def user_owo(channel, text, name):
-    """
-    Owoifys a users text for a user
-    You need to use await for this function
-    """
-    message = text.replace("r", "w").replace("l", "w").replace("L", "W").replace("R", "W")
-    owoified = f"'{message[0][0]}-{message}' - {name}"
-    return await channel.send(f"{owoified}")
-
-
-async def decode(text):
+def decode(text):
     decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
     return decoded
-
-async def discord_decode(channel, text):
-    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
-    return await channel.send(f"{decoded}")
