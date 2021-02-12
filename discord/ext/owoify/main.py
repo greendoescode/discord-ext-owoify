@@ -88,11 +88,3 @@ async def user_owo(channel, text, name):
         owoified = f"'{message}' - {name}"
     return await channel.send(f"{owoified}")
 
-
-async def decode(text):
-    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
-    return decoded
-
-async def discord_decode(channel, text):
-    decoded = text.replace("hewwo", "hello").replace("Hewwo", "Hello").replace("Wuve", "Love").replace("wuve", "love").replace("Awe", "Are").replace("awe", "are").replace("wmao", "lmao").replace("Wmao", "Lmao")
-    return await channel.send(f"{decoded}")
