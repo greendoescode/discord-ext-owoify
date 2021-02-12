@@ -12,9 +12,9 @@ def owoifyer(text):
         owoified = f"{message}"
     return owoified
 
-def randemoji(number):
+def randemoji(number: int):
     emojis = dict([("XwX", 1), ("OvO", 2), ("OwO", 3), ("UwU", 4), (">:3", 5), ("-w-", 6), ("ÙwÚ", 7), ("CwC", 8)])
-    emoji = (emojis[number])
+    emoji = (emojis[int(number)])
     if number in emoji:
         return f"{random.choice(emoji)}"
     else:
