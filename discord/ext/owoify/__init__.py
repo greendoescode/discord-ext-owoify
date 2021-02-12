@@ -18,7 +18,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
-from .main import owoify, owo, discord_owo, user_owo,owoifysync
+from .main import owoify, owo, discord_owo, user_owo, owoifysync
 from .decode import decode, discord_decode
 
 __version__ = "0.0.5-a"
