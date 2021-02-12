@@ -14,8 +14,17 @@ def owoifyer(text):
 
 def randemoji(number: int):
     try:
-        emojis = dict([(1, "XwX"), (2, "OvO"), (3, "OwO"), (4, "UwU"), (5, ">:3"), (6, "-w-"), (7, "ÙwÚ"), (8, "CwC")])
-        emoji = (emojis[number])
-        return f"{random.choice(emoji)}"
+        emojis = {
+                 "1":, "XwX", 
+                 "2": "OvO", 
+                 "3": "OwO", 
+                 "4": "UwU", 
+                 "5": ">:3",
+                 "6": "-w-", 
+                 "7": "ÙwÚ",
+                 "8": "CwC"
+                 }
+        emoji = random.choice(emojis[str(number)])
+        return emoji
     except KeyError:
         raise NotAValidNumber(f"Number '{number}' is not a valid option, please pick from 1-8")
