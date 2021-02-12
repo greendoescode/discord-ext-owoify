@@ -61,5 +61,5 @@ def decode(text):
     return decoded
 
 def owo(number):
-    owoemoji = randemoji(1)
+    owoemoji = randemoji(number)
     return owoemoji
