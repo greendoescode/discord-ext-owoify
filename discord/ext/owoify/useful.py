@@ -26,4 +26,5 @@ def randemoji(number: int):
         emoji = emojis[str(number)]
         return emoji
     except KeyError:
-        raise NotAValidNumber(f"Number '{number}' is not a valid option, please pick from 1-8")
+        error = f"Number '{number}' is not a valid option, please pick from 1-8"
+        raise NotAValidNumber(error)
