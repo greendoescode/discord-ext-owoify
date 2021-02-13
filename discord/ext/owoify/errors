@@ -1,0 +1,2 @@
+class NotAValidNumber(Exception):
+    pass
