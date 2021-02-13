@@ -1,7 +1,6 @@
 import random
 
-class NotAValidNumber(Exception):
-    pass
+from .errors import NotAValidNumber
 
 def owoifyer(text):
     message = text.replace("r", "w").replace(
