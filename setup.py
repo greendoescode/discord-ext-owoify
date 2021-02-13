@@ -3,7 +3,7 @@ import re
 
 
 
-version = '0.0.5-a'
+version = '0.0.6-a'
 
 
 
