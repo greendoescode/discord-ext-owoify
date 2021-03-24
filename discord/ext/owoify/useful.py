@@ -11,7 +11,7 @@ def owoifyer(text):
         owoified = f"{message}"
     return owoified
 
-def randemoji(number: int):
+def randemoji(number):
     try:
         emojis = {
                  "1": "XwX", 
@@ -24,7 +24,11 @@ def randemoji(number: int):
                  "8": "CwC"
                  }
         emoji = emojis[str(number)]
+        if number == random:
+            number = random.int(1, 8)
+            emoji = emojis[str(number)]
         return emoji
     except KeyError:
         error = f"Number '{number}' is not a valid option, please pick from 1-8"
         raise NotAValidNumber(error)
+    
