@@ -38,7 +38,6 @@ __version__ = '0.0.7.9-a'
 def owoify(text):
     """
     Owoify's given text
-    You need to await this function.
     """
     owoified = owoifyer(f"{text}")
     return owoified
