@@ -30,7 +30,7 @@ import random
 
 from .useful import owoifyer, randemoji
 
-__version__ = '0.0.6-a'
+__version__ = '0.0.7.9-a'
 
 
 
